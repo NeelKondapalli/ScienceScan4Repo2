@@ -13,9 +13,11 @@
 		3B469ECA2C2166E1009D0CFF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 3B469EC92C2166E1009D0CFF /* Base */; };
 		3B469ECC2C2166E2009D0CFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B469ECB2C2166E2009D0CFF /* Assets.xcassets */; };
 		3B469ECF2C2166E2009D0CFF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 3B469ECE2C2166E2009D0CFF /* Base */; };
+		BCFB6098C52082388192D8AE /* Pods_ScienceScan4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6553A6502D92D71214C911DB /* Pods_ScienceScan4.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		061F083062CB2C1E60EB8BDB /* Pods-ScienceScan4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScienceScan4.debug.xcconfig"; path = "Target Support Files/Pods-ScienceScan4/Pods-ScienceScan4.debug.xcconfig"; sourceTree = "<group>"; };
 		3B469EBF2C2166E1009D0CFF /* ScienceScan4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScienceScan4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B469EC22C2166E1009D0CFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B469EC42C2166E1009D0CFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		3B469ECB2C2166E2009D0CFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B469ECE2C2166E2009D0CFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B469ED02C2166E2009D0CFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6553A6502D92D71214C911DB /* Pods_ScienceScan4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScienceScan4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2D590738D515C704F28CA33 /* Pods-ScienceScan4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScienceScan4.release.xcconfig"; path = "Target Support Files/Pods-ScienceScan4/Pods-ScienceScan4.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCFB6098C52082388192D8AE /* Pods_ScienceScan4.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21EC042DCED0AB51FA96153B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6553A6502D92D71214C911DB /* Pods_ScienceScan4.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		30170C0EF4F3212B88C59914 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				061F083062CB2C1E60EB8BDB /* Pods-ScienceScan4.debug.xcconfig */,
+				F2D590738D515C704F28CA33 /* Pods-ScienceScan4.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3B469EB62C2166E1009D0CFF = {
 			isa = PBXGroup;
 			children = (
 				3B469EC12C2166E1009D0CFF /* ScienceScan4 */,
 				3B469EC02C2166E1009D0CFF /* Products */,
+				30170C0EF4F3212B88C59914 /* Pods */,
+				21EC042DCED0AB51FA96153B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B469ED32C2166E2009D0CFF /* Build configuration list for PBXNativeTarget "ScienceScan4" */;
 			buildPhases = (
+				316D4185BA025D78CAC1D69F /* [CP] Check Pods Manifest.lock */,
 				3B469EBB2C2166E1009D0CFF /* Sources */,
 				3B469EBC2C2166E1009D0CFF /* Frameworks */,
 				3B469EBD2C2166E1009D0CFF /* Resources */,
+				4DCED27449B2D11CDFC8FF72 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		316D4185BA025D78CAC1D69F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScienceScan4-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DCED27449B2D11CDFC8FF72 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ScienceScan4/Pods-ScienceScan4-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ScienceScan4/Pods-ScienceScan4-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ScienceScan4/Pods-ScienceScan4-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3B469EBB2C2166E1009D0CFF /* Sources */ = {
@@ -203,7 +271,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -266,7 +334,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -287,6 +355,7 @@
 		};
 		3B469ED42C2166E2009D0CFF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 061F083062CB2C1E60EB8BDB /* Pods-ScienceScan4.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -315,6 +384,7 @@
 		};
 		3B469ED52C2166E2009D0CFF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2D590738D515C704F28CA33 /* Pods-ScienceScan4.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
