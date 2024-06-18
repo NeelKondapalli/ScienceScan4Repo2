@@ -13,6 +13,15 @@
 		3B469ECA2C2166E1009D0CFF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 3B469EC92C2166E1009D0CFF /* Base */; };
 		3B469ECC2C2166E2009D0CFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B469ECB2C2166E2009D0CFF /* Assets.xcassets */; };
 		3B469ECF2C2166E2009D0CFF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 3B469ECE2C2166E2009D0CFF /* Base */; };
+		3BEE3E192C21721C0025E8AE /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE3E182C21721C0025E8AE /* Task.swift */; };
+		3BEE3E1F2C217B400025E8AE /* TaskTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE3E1E2C217B400025E8AE /* TaskTableView.swift */; };
+		3BEE3E212C2194630025E8AE /* TaskSetupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE3E202C2194630025E8AE /* TaskSetupVC.swift */; };
+		3BEE3E232C219C8F0025E8AE /* TaskRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE3E222C219C8F0025E8AE /* TaskRunVC.swift */; };
+		3BEE3E272C21FC220025E8AE /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE3E262C21FC220025E8AE /* TaskCell.swift */; };
+		3BEE3E292C22054E0025E8AE /* SampleTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE3E282C22054E0025E8AE /* SampleTableView.swift */; };
+		3BEE3E2D2C2206130025E8AE /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE3E2C2C2206130025E8AE /* Sample.swift */; };
+		3BEE3E2F2C220AE90025E8AE /* SampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE3E2E2C220AE90025E8AE /* SampleCell.swift */; };
+		3BEE3E312C2212F50025E8AE /* SampleAddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE3E302C2212F50025E8AE /* SampleAddVC.swift */; };
 		BCFB6098C52082388192D8AE /* Pods_ScienceScan4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6553A6502D92D71214C911DB /* Pods_ScienceScan4.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +35,15 @@
 		3B469ECB2C2166E2009D0CFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B469ECE2C2166E2009D0CFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B469ED02C2166E2009D0CFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BEE3E182C21721C0025E8AE /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		3BEE3E1E2C217B400025E8AE /* TaskTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableView.swift; sourceTree = "<group>"; };
+		3BEE3E202C2194630025E8AE /* TaskSetupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSetupVC.swift; sourceTree = "<group>"; };
+		3BEE3E222C219C8F0025E8AE /* TaskRunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRunVC.swift; sourceTree = "<group>"; };
+		3BEE3E262C21FC220025E8AE /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		3BEE3E282C22054E0025E8AE /* SampleTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTableView.swift; sourceTree = "<group>"; };
+		3BEE3E2C2C2206130025E8AE /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
+		3BEE3E2E2C220AE90025E8AE /* SampleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCell.swift; sourceTree = "<group>"; };
+		3BEE3E302C2212F50025E8AE /* SampleAddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAddVC.swift; sourceTree = "<group>"; };
 		6553A6502D92D71214C911DB /* Pods_ScienceScan4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScienceScan4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2D590738D515C704F28CA33 /* Pods-ScienceScan4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScienceScan4.release.xcconfig"; path = "Target Support Files/Pods-ScienceScan4/Pods-ScienceScan4.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,10 +101,19 @@
 				3B469EC22C2166E1009D0CFF /* AppDelegate.swift */,
 				3B469EC42C2166E1009D0CFF /* SceneDelegate.swift */,
 				3B469EC62C2166E1009D0CFF /* ViewController.swift */,
+				3BEE3E202C2194630025E8AE /* TaskSetupVC.swift */,
 				3B469EC82C2166E1009D0CFF /* Main.storyboard */,
+				3BEE3E302C2212F50025E8AE /* SampleAddVC.swift */,
+				3BEE3E2E2C220AE90025E8AE /* SampleCell.swift */,
+				3BEE3E222C219C8F0025E8AE /* TaskRunVC.swift */,
+				3BEE3E262C21FC220025E8AE /* TaskCell.swift */,
+				3BEE3E2C2C2206130025E8AE /* Sample.swift */,
+				3BEE3E1E2C217B400025E8AE /* TaskTableView.swift */,
+				3BEE3E282C22054E0025E8AE /* SampleTableView.swift */,
 				3B469ECB2C2166E2009D0CFF /* Assets.xcassets */,
 				3B469ECD2C2166E2009D0CFF /* LaunchScreen.storyboard */,
 				3B469ED02C2166E2009D0CFF /* Info.plist */,
+				3BEE3E182C21721C0025E8AE /* Task.swift */,
 			);
 			path = ScienceScan4;
 			sourceTree = "<group>";
@@ -206,9 +233,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BEE3E2F2C220AE90025E8AE /* SampleCell.swift in Sources */,
+				3BEE3E1F2C217B400025E8AE /* TaskTableView.swift in Sources */,
+				3BEE3E192C21721C0025E8AE /* Task.swift in Sources */,
 				3B469EC72C2166E1009D0CFF /* ViewController.swift in Sources */,
+				3BEE3E232C219C8F0025E8AE /* TaskRunVC.swift in Sources */,
 				3B469EC32C2166E1009D0CFF /* AppDelegate.swift in Sources */,
+				3BEE3E212C2194630025E8AE /* TaskSetupVC.swift in Sources */,
+				3BEE3E272C21FC220025E8AE /* TaskCell.swift in Sources */,
+				3BEE3E312C2212F50025E8AE /* SampleAddVC.swift in Sources */,
 				3B469EC52C2166E1009D0CFF /* SceneDelegate.swift in Sources */,
+				3BEE3E2D2C2206130025E8AE /* Sample.swift in Sources */,
+				3BEE3E292C22054E0025E8AE /* SampleTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,15 +396,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = BMF62ZB494;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ScienceScan4/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScienceScan;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,9 +415,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.neelkondapalli.ScienceScan4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -389,15 +432,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = BMF62ZB494;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ScienceScan4/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScienceScan;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -405,9 +451,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.neelkondapalli.ScienceScan4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
