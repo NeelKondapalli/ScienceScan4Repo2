@@ -113,7 +113,7 @@ class SampleAddVC: UIViewController {
             
             guard let firstComponent = components.first else { return }
             
-            var readingComponent = firstComponent
+
 
     
             

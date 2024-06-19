@@ -15,8 +15,9 @@ let results = realm.objects(Task.self)
 class ViewController: UIViewController {
     @IBOutlet weak var requestorField: UITextField!
     
-    @IBOutlet weak var assayField: UITextView?
-
+    
+    @IBOutlet weak var assayField: UITextField!
+    
     @IBOutlet weak var nameField: UITextField?
     
     override func viewDidLoad() {

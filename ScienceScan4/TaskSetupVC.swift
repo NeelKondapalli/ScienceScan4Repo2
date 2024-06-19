@@ -26,6 +26,11 @@ class TaskSetupVC: UIViewController {
     @IBOutlet weak var mode: UITextField!
     @IBOutlet weak var vendor: UITextField!
     
+    
+    @IBOutlet weak var assayLabel: UILabel!
+    @IBOutlet weak var requestorLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    
     var taskIndex: Int? = -1
     
     override func viewDidLoad() {
@@ -52,6 +57,10 @@ class TaskSetupVC: UIViewController {
             calibration.text = task.calibration
             mode.text = task.mode
             vendor.text = task.vendor
+            
+            nameLabel.text = task.name
+            requestorLabel.text = task.requestor
+            assayLabel.text = task.assay
         }
         //print(results[0].requestor)
         
