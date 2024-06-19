@@ -45,8 +45,8 @@ class ViewController: UIViewController {
         myTask.assay = assayField?.text ?? "No assay"
         myTask.name = nameField?.text ?? "No name"
         
-        if let coun = myTask.requestor?.count {
-            if coun > 0 {
+        if let coun1 = myTask.requestor?.count, let coun2 = myTask.assay?.count, let coun3 = myTask.name?.count {
+            if coun1 > 0, coun2 > 0, coun3 > 0 {
                 do
                 {
                     try realm.write {

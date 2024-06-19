@@ -7,6 +7,7 @@
 
 import Foundation
 import RealmSwift
+import VisionKit
 
 class SampleAddVC: UIViewController {
 
@@ -19,6 +20,10 @@ class SampleAddVC: UIViewController {
     var taskIndex: Int? = -1
     var sampleIndex: Int? = -1
     var sample: Sample? = nil
+    
+    var scannerAvailable: Bool {
+        DataScannerViewController.isSupported && DataScannerViewController.isAvailable
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,8 +64,8 @@ class SampleAddVC: UIViewController {
         mySample.reading = readingField?.text ?? "No reading"
         mySample.unit = unitField?.text ?? "No units"
         
-        if let coun = mySample.sampleName?.count {
-            if coun > 0 {
+        if let coun1 = mySample.sampleName?.count, let coun2 = mySample.reading?.count, let coun3 = mySample.unit?.count {
+            if coun1 > 0, coun2 > 0, coun3 > 0 {
                 
                 if let index = taskIndex {
                     let samples = results[index].sampleArray
@@ -128,4 +133,37 @@ class SampleAddVC: UIViewController {
         }
     }
     
+    
+    @IBAction func startScanningPressed(_ sender: Any) {
+        print("Starting scan")
+        guard scannerAvailable == true else {
+            print("Error: Scanner is not available. Please check settings.")
+            return
+        }
+        
+        let dataScanner = DataScannerViewController(recognizedDataTypes: [.text()],
+        isHighlightingEnabled: true)
+        
+        dataScanner.delegate = self
+        
+        present(dataScanner, animated: true) {
+            try? dataScanner.startScanning()
+        }
+        
+    }
+}
+
+
+extension SampleAddVC: DataScannerViewControllerDelegate {
+    func dataScanner(_ dataScanner: DataScannerViewController, didTapOn item: RecognizedItem) {
+        switch item {
+        case .text(let text):
+            print("Text:  \(text.transcript)")
+            readingField.text = text.transcript
+        default:
+            print("Unexpected item")
+        }
+        dataScanner.stopScanning()
+        dataScanner.dismiss(animated: true)
+    }
 }
