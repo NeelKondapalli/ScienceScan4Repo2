@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B063CEE2C226649003A84BF /* ReadingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B063CED2C226649003A84BF /* ReadingComponent.swift */; };
 		3B469EC32C2166E1009D0CFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B469EC22C2166E1009D0CFF /* AppDelegate.swift */; };
 		3B469EC52C2166E1009D0CFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B469EC42C2166E1009D0CFF /* SceneDelegate.swift */; };
 		3B469EC72C2166E1009D0CFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B469EC62C2166E1009D0CFF /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		061F083062CB2C1E60EB8BDB /* Pods-ScienceScan4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScienceScan4.debug.xcconfig"; path = "Target Support Files/Pods-ScienceScan4/Pods-ScienceScan4.debug.xcconfig"; sourceTree = "<group>"; };
+		3B063CED2C226649003A84BF /* ReadingComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingComponent.swift; sourceTree = "<group>"; };
 		3B469EBF2C2166E1009D0CFF /* ScienceScan4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScienceScan4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B469EC22C2166E1009D0CFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B469EC42C2166E1009D0CFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				3BEE3E202C2194630025E8AE /* TaskSetupVC.swift */,
 				3B469EC82C2166E1009D0CFF /* Main.storyboard */,
 				3BEE3E302C2212F50025E8AE /* SampleAddVC.swift */,
+				3B063CED2C226649003A84BF /* ReadingComponent.swift */,
 				3BEE3E2E2C220AE90025E8AE /* SampleCell.swift */,
 				3BEE3E222C219C8F0025E8AE /* TaskRunVC.swift */,
 				3BEE3E262C21FC220025E8AE /* TaskCell.swift */,
@@ -242,6 +245,7 @@
 				3BEE3E212C2194630025E8AE /* TaskSetupVC.swift in Sources */,
 				3BEE3E272C21FC220025E8AE /* TaskCell.swift in Sources */,
 				3BEE3E312C2212F50025E8AE /* SampleAddVC.swift in Sources */,
+				3B063CEE2C226649003A84BF /* ReadingComponent.swift in Sources */,
 				3B469EC52C2166E1009D0CFF /* SceneDelegate.swift in Sources */,
 				3BEE3E2D2C2206130025E8AE /* Sample.swift in Sources */,
 				3BEE3E292C22054E0025E8AE /* SampleTableView.swift in Sources */,
