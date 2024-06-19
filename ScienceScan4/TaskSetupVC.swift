@@ -74,8 +74,8 @@ class TaskSetupVC: UIViewController {
         myTask.vendor = vendor?.text ?? "No vendor"
         myTask.mode = mode?.text ?? "No mode"
         myTask.calibration = calibration?.text ?? "No calibration"
-        if let coun = myTask.instrumentName?.count {
-            if coun > 0 {
+        if let coun1 = myTask.instrumentName?.count, let coun2 = myTask.serialNumber?.count, let coun3 = myTask.vendor?.count, let coun4 = myTask.mode?.count, let coun5 = myTask.calibration?.count {
+            if coun1 > 0, coun2 > 0, coun3 > 0, coun4 > 0, coun5 > 0 {
                 
                 if let index = taskIndex {
                     let task = results[index]

@@ -13,6 +13,6 @@ class Sample: Object {
     @objc dynamic var sampleName: String?
     @objc dynamic var reading: String?
     @objc dynamic var unit: String?
-    
+    @objc dynamic var note: String?
 }
 

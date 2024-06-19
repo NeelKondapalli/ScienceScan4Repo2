@@ -21,5 +21,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Speak and your verbal note will be added for your convenience</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Your microphone will be used to detect your speech after you press the record icon</string>
 </dict>
 </plist>
