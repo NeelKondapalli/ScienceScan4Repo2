@@ -141,6 +141,25 @@ class TaskSetupVC: UIViewController {
         
     }
     
+    @IBAction func scanCode(_ sender: Any) {
+        let scanner = BarcodeScannerVC()
+        
+        scanner.completionHandler = { array in
+            print("Array received from completion: \(array)")
+            self.instrumentName.text = array[0]
+            self.serialNumber.text = array[1]
+            self.vendor.text = array[2]
+            self.mode.text = array[3]
+            self.calibration.text = array[4]
+            
+        }
+        
+        present(scanner, animated: true)
+        
+        
+    }
+        
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "runTask") {
             let indexPath = taskIndex ?? 0

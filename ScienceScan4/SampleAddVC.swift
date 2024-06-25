@@ -7,8 +7,13 @@
 
 import Foundation
 import RealmSwift
+
+//For live text scan
 import VisionKit
+
+//For image upload
 import Vision
+
 import Photos
 import Speech
 
@@ -280,6 +285,7 @@ class SampleAddVC: UIViewController, SFSpeechRecognizerDelegate{
             return
         }
         
+        //optional add .barcode()
         let dataScanner = DataScannerViewController(recognizedDataTypes: [.text()],
         isHighlightingEnabled: true)
         
@@ -429,6 +435,9 @@ extension SampleAddVC: DataScannerViewControllerDelegate, UIImagePickerControlle
         case .text(let text):
             print("Text:  \(text.transcript)")
             readingField.text = text.transcript
+//        case .barcode(let code):
+//            print("Code:  \(code.payloadStringValue)")
+//            readingField.text = code.payloadStringValue
         default:
             print("Unexpected item")
         }
