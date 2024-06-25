@@ -70,6 +70,14 @@ class TaskRunVC: UIViewController {
 
     
    
+    @IBAction func submitAction(_ sender: Any) {
+        if let rowCount = sampleArray?.count {
+            if rowCount > 0 {
+                print("row: \(rowCount)")
+                performSegue(withIdentifier: "submitTask", sender: nil)
+            }
+        }
+    }
     
 
 }

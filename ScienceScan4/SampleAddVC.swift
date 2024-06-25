@@ -65,6 +65,14 @@ class SampleAddVC: UIViewController, SFSpeechRecognizerDelegate{
                         sampleNameField.text = s.sampleName
                         noteField.text = s.note
                     }
+                    if let coun1 = readingField.text?.count, let coun2 = unitField?.text?.count, let coun3 = sampleNameField.text?.count {
+                        if coun1 > 0, coun2 > 0, coun3 > 0 {
+                            readingField.isUserInteractionEnabled = false
+                            unitField.isUserInteractionEnabled = false
+                            sampleNameField.isUserInteractionEnabled = false
+                        }
+                    
+                    }
                 }
             }
         }

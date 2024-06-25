@@ -61,6 +61,17 @@ class TaskSetupVC: UIViewController {
             nameLabel.text = task.name
             requestorLabel.text = task.requestor
             assayLabel.text = task.assay
+            
+            if let coun1 = instrumentName.text?.count, let coun2 = serialNumber?.text?.count, let coun3 = vendor.text?.count, let coun4 = mode.text?.count, let coun5 = calibration.text?.count {
+                if coun1 > 0, coun2 > 0, coun3 > 0, coun4 > 0, coun5 > 0 {
+                    instrumentName.isUserInteractionEnabled = false
+                    serialNumber.isUserInteractionEnabled = false
+                    vendor.isUserInteractionEnabled = false
+                    mode.isUserInteractionEnabled = false
+                    calibration.isUserInteractionEnabled = false
+                }
+            
+            }
         }
         //print(results[0].requestor)
         
@@ -90,6 +101,8 @@ class TaskSetupVC: UIViewController {
                             
                         }
                         // navigationController?.popViewController(animated: true)
+                        
+                        
                         performSegue(withIdentifier: "runTask", sender: nil)
                         
                     }
