@@ -32,13 +32,13 @@ class SampleAddVC: UIViewController, SFSpeechRecognizerDelegate{
     
     
     var image: UIImage?
-    
     lazy var textDetectionRequest: VNRecognizeTextRequest = {
             let request = VNRecognizeTextRequest(completionHandler: self.handleDetectedText)
             request.recognitionLevel = .accurate
             request.recognitionLanguages = ["en_GB"]
             return request
         }()
+    
     
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "en-US"))
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
@@ -107,6 +107,14 @@ class SampleAddVC: UIViewController, SFSpeechRecognizerDelegate{
         }
     }
     
+    
+    
+    // Action for image upload
+    @IBAction func choosePhoto(_ sender: Any) {
+        presentPhotoPicker(type: .photoLibrary)
+    }
+    
+    // Processes uploaded image, calls completion on self.handleDetectedText
     func processImage() {
         guard let image = image, let cgImage = image.cgImage else { return }
                 
@@ -121,6 +129,20 @@ class SampleAddVC: UIViewController, SFSpeechRecognizerDelegate{
         }
     }
     
+    // Not implemented
+    @IBAction func takePhoto(_ sender: Any) {
+        presentPhotoPicker(type: .camera)
+    }
+    
+    // Presents photo picker
+    fileprivate func presentPhotoPicker(type: UIImagePickerController.SourceType) {
+            let controller = UIImagePickerController()
+            controller.sourceType = type
+            controller.delegate = self
+            present(controller, animated: true, completion: nil)
+        }
+    
+    // See if the request has valid text
     fileprivate func handleDetectedText(request: VNRequest?, error: Error?) {
             if let error = error {
                 print("Error: \(error.localizedDescription)")
@@ -153,15 +175,14 @@ class SampleAddVC: UIViewController, SFSpeechRecognizerDelegate{
             guard let firstComponent = components.first else { return }
             
 
-
-    
-            
             DispatchQueue.main.async {
                print("Reading: \(firstComponent.text)")
                 self.readingField.text = firstComponent.text
                 
             }
         }
+    
+    // Helper fn for above (handleDetectedText)
     private func isValidNumber(_ text: String) -> Bool {
         let numberSet = CharacterSet(charactersIn: "0123456789")
         
@@ -171,27 +192,8 @@ class SampleAddVC: UIViewController, SFSpeechRecognizerDelegate{
             return false
         }
     }
-    
-    fileprivate func presentAlert(title: String, message: String) {
-            let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
-            controller.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            present(controller, animated: true, completion: nil)
-        }
-    
-    @IBAction func choosePhoto(_ sender: Any) {
-        presentPhotoPicker(type: .photoLibrary)
-    }
-    @IBAction func takePhoto(_ sender: Any) {
-        presentPhotoPicker(type: .camera)
-    }
-    
-    fileprivate func presentPhotoPicker(type: UIImagePickerController.SourceType) {
-            let controller = UIImagePickerController()
-            controller.sourceType = type
-            controller.delegate = self
-            present(controller, animated: true, completion: nil)
-        }
    
+    // Action for save button
     @IBAction func saveAction(_ sender: Any) {
         let mySample = Sample()
         mySample.sampleName = sampleNameField?.text ?? "No sampleName"
@@ -233,6 +235,7 @@ class SampleAddVC: UIViewController, SFSpeechRecognizerDelegate{
         }
     }
     
+    // Action for delete button
     @IBAction func deleteSampleAction(_ sender: Any) {
         
         print("deleting")
@@ -269,7 +272,7 @@ class SampleAddVC: UIViewController, SFSpeechRecognizerDelegate{
         }
     }
     
-    
+    // Action for live scan start
     @IBAction func startScanningPressed(_ sender: Any) {
         print("Starting scan")
         guard scannerAvailable == true else {
@@ -289,6 +292,8 @@ class SampleAddVC: UIViewController, SFSpeechRecognizerDelegate{
         }
         
     }
+    
+    // Func for speech capture
     @IBAction func startSpeechCapture() {
 //        let node = audioEngine.inputNode
 //        let recordingFormat = node.outputFormat(forBus: 0)
@@ -378,6 +383,7 @@ class SampleAddVC: UIViewController, SFSpeechRecognizerDelegate{
             noteField.text = "Speak into the microphone"
     }
     
+    // Changes button status if speechrecognier status changes
     func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {
         if available {
             micButton.isEnabled = true
@@ -385,6 +391,8 @@ class SampleAddVC: UIViewController, SFSpeechRecognizerDelegate{
             micButton.isEnabled = false
         }
     }
+    
+    // Action for tapping the mic button
     @IBAction func micTapped(_ sender: Any) {
         if let engine = audioEngine {
             if engine.isRunning {
@@ -396,16 +404,26 @@ class SampleAddVC: UIViewController, SFSpeechRecognizerDelegate{
                 micButton.setImage(microphoneImage, for: .normal)
             } else {
                 self.startSpeechCapture()
-                micButton.setTitle("End", for: .normal)
-                micButton.setImage(nil, for: .normal)
+                let checkImage = UIImage(systemName: "checkmark.circle")
+                micButton.setImage(checkImage, for: .normal)
+
+                
             }
         }
     }
+    
+    // Misc. Alert fn
+    fileprivate func presentAlert(title: String, message: String) {
+            let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            controller.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(controller, animated: true, completion: nil)
+        }
     
 }
 
 
 extension SampleAddVC: DataScannerViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
+    // Conform SampleAddVC to Data scanner (for live scan)
     func dataScanner(_ dataScanner: DataScannerViewController, didTapOn item: RecognizedItem) {
         switch item {
         case .text(let text):
@@ -418,10 +436,12 @@ extension SampleAddVC: DataScannerViewControllerDelegate, UIImagePickerControlle
         dataScanner.dismiss(animated: true)
     }
     
+    // Conform to image picker (for upload scan)
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
             dismiss(animated: true, completion: nil)
         }
-        
+    
+    // Conform to image picker (for upload scan)
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         dismiss(animated: true, completion: nil)
