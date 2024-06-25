@@ -39,7 +39,7 @@ class TaskRunVC: UIViewController {
             task = results[index]
             if let temp = task  {
                 sampleArray = Array(temp.sampleArray)
-                print("Fetched23")
+                print("Fetched")
             }
         }
         else {
