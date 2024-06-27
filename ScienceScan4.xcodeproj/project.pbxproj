@@ -24,6 +24,7 @@
 		3BEE3E2D2C2206130025E8AE /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE3E2C2C2206130025E8AE /* Sample.swift */; };
 		3BEE3E2F2C220AE90025E8AE /* SampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE3E2E2C220AE90025E8AE /* SampleCell.swift */; };
 		3BEE3E312C2212F50025E8AE /* SampleAddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE3E302C2212F50025E8AE /* SampleAddVC.swift */; };
+		6F68A2202C2DBA8F00E1E87D /* ReadingScannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F68A21F2C2DBA8F00E1E87D /* ReadingScannerVC.swift */; };
 		6FC403D62C2B431C00224E99 /* BarcodeScannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC403D52C2B431C00224E99 /* BarcodeScannerVC.swift */; };
 		BCFB6098C52082388192D8AE /* Pods_ScienceScan4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6553A6502D92D71214C911DB /* Pods_ScienceScan4.framework */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		3BEE3E2E2C220AE90025E8AE /* SampleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCell.swift; sourceTree = "<group>"; };
 		3BEE3E302C2212F50025E8AE /* SampleAddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAddVC.swift; sourceTree = "<group>"; };
 		6553A6502D92D71214C911DB /* Pods_ScienceScan4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScienceScan4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F68A21F2C2DBA8F00E1E87D /* ReadingScannerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingScannerVC.swift; sourceTree = "<group>"; };
 		6F811DB72C2C6EC60037C5D1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6FC403D52C2B431C00224E99 /* BarcodeScannerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerVC.swift; sourceTree = "<group>"; };
 		F2D590738D515C704F28CA33 /* Pods-ScienceScan4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScienceScan4.release.xcconfig"; path = "Target Support Files/Pods-ScienceScan4/Pods-ScienceScan4.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				3B469EC42C2166E1009D0CFF /* SceneDelegate.swift */,
 				3B469EC62C2166E1009D0CFF /* ViewController.swift */,
 				3BEE3E202C2194630025E8AE /* TaskSetupVC.swift */,
+				6F68A21F2C2DBA8F00E1E87D /* ReadingScannerVC.swift */,
 				3B469EC82C2166E1009D0CFF /* Main.storyboard */,
 				3B45CE532C22CAEA00325CE1 /* ExampleLoaderVC.swift */,
 				3BEE3E302C2212F50025E8AE /* SampleAddVC.swift */,
@@ -260,6 +263,7 @@
 				3B469EC52C2166E1009D0CFF /* SceneDelegate.swift in Sources */,
 				6FC403D62C2B431C00224E99 /* BarcodeScannerVC.swift in Sources */,
 				3BEE3E2D2C2206130025E8AE /* Sample.swift in Sources */,
+				6F68A2202C2DBA8F00E1E87D /* ReadingScannerVC.swift in Sources */,
 				3BEE3E292C22054E0025E8AE /* SampleTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
